@@ -10,14 +10,28 @@ body{
     height: 100%;
     background: no-repeat;
     background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    background-image: url("../../Assets/Images/burger-hero.jpg");
     justify-content: center;
     align-items: center;
 }
 
+.parallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+ 
+ @mixin myParallax($image, $width) {
+    background-image: url($image);
+    width: $width;
+    height: $width;
+ }
+
 .container{
     display:flex;
     flex-direction: column;
-    background-color: #FFFFFF;
+    background-color: rgba(255,255,255,.9);
     width: 80%;
     max-width: 1100px;
     height: 95%;
