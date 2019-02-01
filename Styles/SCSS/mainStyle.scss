@@ -1,3 +1,12 @@
+$deepRed: #a90329;
+$mainGrey: #CFD4D9;
+
+$gradientTop: #a90329;
+$gradientMid: #8f0222;
+$gradientBottom: #6d0019;
+
+// https://coolors.co/a90329-550527-688e26-faa613-f44708
+
 html{
     height: 100%;
     font-family: 'Montserrat', sans-serif;
@@ -9,7 +18,7 @@ body{
     width: 100%;
     height: 100%;
     background: no-repeat;
-    background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    background: linear-gradient(to bottom, $gradientTop 0%,$gradientMid 44%,$gradientBottom 100%);
     background-image: url("../../Assets/Images/burger-hero.jpg");
     justify-content: center;
     align-items: center;
@@ -50,14 +59,19 @@ body{
     align-items: center;
     padding: 0 28px;
 }
-.navBar{
-    display: flex;
-    width: 100%;
-    align-items: center;
-}
 .logo{
     height: 10vh;
     margin-right: 5%;
+}
+.searchBox,.searchButton{
+    border-color: $mainGrey;
+}
+.searchButton:hover{
+    color: white;
+    background-color: $mainGrey;
+}
+a:hover{
+    color: $deepRed;
 }
 .navigation{
     display: flex;
@@ -98,7 +112,7 @@ body{
 .sideBarSelection {
     width: 100%;
     height: 33%;
-    background-color: #a90329;
+    background-color: $deepRed;
     margin-top: 5px;
     border-radius: 0 20px 20px 0;
     text-align: center;
