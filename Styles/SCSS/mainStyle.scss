@@ -7,27 +7,98 @@ $gradientBottom: #6d0019;
 
 // https://coolors.co/a90329-550527-688e26-faa613-f44708
 
-html{
+html {
     height: 100%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    // font-family: 'Righteous', cursive;
 }
-body{
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     height: 100%;
     background: no-repeat;
-    background: linear-gradient(to bottom, $gradientTop 0%,$gradientMid 44%,$gradientBottom 100%);
+    background: linear-gradient(to bottom, $gradientTop 0%, $gradientMid 44%, $gradientBottom 100%);
     background-image: url("../../Assets/Images/burger-hero.jpg");
 }
 
-.parallax{
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
- }
- 
- @mixin myParallax($image, $width) {
-    background-image: url($image);
-    width: $width;
-    height: $width;
- }
+// .parallax {
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
 
+// @mixin toParallax($image, $width) {
+//     background-image: url($image);
+//     width: $width;
+//     height: $width;
+// }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, .9);
+    width: 90%;
+    // max-width: 1100px;
+    height: 95%;
+    border-radius: 20px;
+    // border-bottom-right-radius: 0%;
+    // margin: 0 auto;
+
+}
+
+.top {
+    position: fixed;
+    top: 5%;
+    width: 75%;
+    height: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 28px;
+}
+
+.logo {
+    height: 10vh;
+    margin-right: 5%;
+}
+
+
+a:hover {
+    color: $deepRed;
+}
+
+
+.mainHeader {
+    position: relative;
+    text-align: center;
+    // top: 10%;
+    font-family: 'Righteous', cursive;
+    font-size: 32px;
+    color: rgba(240, 92, 90, 1);
+}
+
+.mainCarousel{
+    width: 100%;
+    height: 70vh;
+}
+
+.bottom {
+    position: relative;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.mainFooter {
+    color: rgba(240, 92, 90, 1);
+}
+
+@media (max-width: 920px) {
+
+}
