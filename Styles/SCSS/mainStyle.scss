@@ -1,11 +1,19 @@
-$deepRed: #a90329;
 $mainGrey: #CFD4D9;
+$themeRed: #a90329;
+$themeDeepRed: #550527;
+$themeGreen: #688E26;
+$themeYellow: #FAA613;
+$themeOrange: #F44708;
+
+$themeBlack: #000000;
+$themeWhite: #ffffff;
 
 $gradientTop: #a90329;
 $gradientMid: #8f0222;
 $gradientBottom: #6d0019;
 
-// https://coolors.co/a90329-550527-688e26-faa613-f44708
+
+// https://coolors.co/a90329-550527-688e26-faa613-f44708  my color palette burger themed
 
 html {
     height: 100%;
@@ -24,8 +32,8 @@ body {
     background-image: url("../../Assets/Images/burger-hero.jpg");
 }
 
-a:hover {
-    color: $deepRed;
+a:hover{
+    color: $themeRed !important;
 }
 
 
@@ -48,7 +56,8 @@ a:hover {
     background-color: rgba(255, 255, 255, .9);
     width: 95%;
     // max-width: 1100px;
-    height: 95%;
+    height: auto;
+    min-height: 95%;
     border-radius: 20px;
     // border-bottom-right-radius: 0%;
     // margin: 0 auto;
@@ -56,11 +65,25 @@ a:hover {
 
 .navbar {
     font-size: 1em;
-    background-color: rgba(255, 255, 255, .9);
+    background-color: $themeYellow !important;
+    box-shadow: 0 0 20px $themeBlack;
     // position: absolute;
     width: 100%;
     z-index: 2;
     // max-height: 88px;
+}
+
+.dropdown-menu {
+    background-color: $themeYellow !important;
+    box-shadow: 0 0 20px $themeBlack;
+}
+
+.colorTextWhite {
+    color: $themeWhite !important;
+}
+
+.colorTextBlack {
+    color: $themeBlack !important;
 }
 
 .logo {
@@ -79,23 +102,23 @@ a:hover {
     // top: 10%;
     font-family: 'Righteous', cursive;
     font-size: 32px;
-    color: rgba(240, 92, 90, 1);
+    color: $themeRed;
 }
 
-.mainCarousel {
-    width: 100%;
-    height: 70vh;
+// .mainCarousel {
+//     width: 100%;
+//     height: 70vh;
 
-    .carousel-inner {
-        width: 100%;
-        height: 100%;
+//     .carousel-inner {
+//         width: 100%;
+//         height: 100%;
 
-        .carousel-item .carouselImage {
-            width: 100%;
-            height: 100%;
-        }
-    }
-}
+//         .carousel-item .carouselImage {
+//             width: 100%;
+//             height: 100%;
+//         }
+//     }
+// }
 
 .bottom {
     position: relative;
@@ -107,7 +130,7 @@ a:hover {
 }
 
 .mainFooter {
-    color: rgba(240, 92, 90, 1);
+    color: $themeRed;
 }
 
 @media (max-width: 768px) {
@@ -122,6 +145,6 @@ a:hover {
     }
 
     .top {
-        margin-top: 118px;
+        margin-top: 138px;
     }
 }
