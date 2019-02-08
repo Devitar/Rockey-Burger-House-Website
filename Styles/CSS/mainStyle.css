@@ -23,12 +23,12 @@ a:hover {
   border-radius: 20px; }
 
 .navbar {
+  font-size: 1em;
   background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
   z-index: 2; }
 
 .logo {
-  height: 10vh;
   margin-right: 5%;
   max-height: 50px;
   min-height: 50px; }
@@ -63,3 +63,13 @@ a:hover {
 
 .mainFooter {
   color: #f05c5a; }
+
+@media (max-width: 768px) {
+  #navBar {
+    font-size: 2em; }
+  #navBar .logo {
+    margin-right: 5%;
+    max-height: 100px;
+    min-height: 100px; }
+  .top {
+    margin-top: 118px; } }

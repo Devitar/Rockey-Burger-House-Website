@@ -42,7 +42,7 @@ a:hover {
 //     height: $width;
 // }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, .9);
@@ -54,7 +54,8 @@ a:hover {
     // margin: 0 auto;
 }
 
-.navbar{
+.navbar {
+    font-size: 1em;
     background-color: rgba(255, 255, 255, .9);
     // position: absolute;
     width: 100%;
@@ -63,15 +64,15 @@ a:hover {
 }
 
 .logo {
-    height: 10vh;
     margin-right: 5%;
     max-height: 50px;
     min-height: 50px;
 }
 
-.top{
+.top {
     margin-top: 88px;
 }
+
 .mainHeader {
     position: relative;
     text-align: center;
@@ -81,13 +82,15 @@ a:hover {
     color: rgba(240, 92, 90, 1);
 }
 
-.mainCarousel{
+.mainCarousel {
     width: 100%;
     height: 70vh;
-    .carousel-inner{
+
+    .carousel-inner {
         width: 100%;
         height: 100%;
-        .carousel-item .carouselImage{
+
+        .carousel-item .carouselImage {
             width: 100%;
             height: 100%;
         }
@@ -107,10 +110,18 @@ a:hover {
     color: rgba(240, 92, 90, 1);
 }
 
-// @media (max-width: 768px) {
-//     #navBar{
-//         position: absolute;
-//         width: 100%;
-//         z-index: 2;
-//     }
-// }
+@media (max-width: 768px) {
+    #navBar {
+        font-size: 2em;
+    }
+
+    #navBar .logo {
+        margin-right: 5%;
+        max-height: 100px;
+        min-height: 100px;
+    }
+
+    .top {
+        margin-top: 118px;
+    }
+}
