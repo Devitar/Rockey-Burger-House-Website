@@ -27,12 +27,12 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background: no-repeat;
-    background: linear-gradient(to bottom, $gradientTop 0%, $gradientMid 44%, $gradientBottom 100%);
+    // background: linear-gradient(to bottom, $gradientTop 0%, $gradientMid 44%, $gradientBottom 100%);
+    background: cover;
     background-image: url("../../Assets/Images/burger-hero.jpg");
 }
 
-a:hover{
+a:hover {
     color: $themeRed !important;
 }
 
@@ -50,7 +50,8 @@ a:hover{
 //     height: $width;
 // }
 
-.container {
+.container,
+.secondaryContainer {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, .9);
@@ -119,6 +120,22 @@ a:hover{
 //         }
 //     }
 // }
+.menuItem {
+    background-color: $themeRed;
+    text-align: center;
+    .menuImage{
+        width: 120px;
+        height: 120px;
+        
+    }
+    .menuFooter{
+        box-shadow: 
+        0px 11px 15px -10px $themeBlack,
+        0px -11px 15px -10px $themeBlack; 
+        // Just top and bottom shadows
+    }
+}
+
 
 .bottom {
     position: relative;

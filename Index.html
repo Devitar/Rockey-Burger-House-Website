@@ -7,14 +7,17 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
-  <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <!-- <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script> -->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script> <!-- Full JQuery version -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
     crossorigin="anonymous"></script>
   <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
 
   <link href="./Styles/CSS/mainStyle.css" rel="stylesheet" type="text/css" />
+  <script defer src="JavaScript/Main.js"></script>
 </head>
 
 <body>
@@ -29,27 +32,28 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="0">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="1">Contact</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle colorTextBlack" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Our Menu
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="0"
-                class="active">Burgers</a>
+              <a class="dropdown-item colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="2"
+                class="active">Burgers & Fries</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="1">Fries</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="2">Shakes
+              <!-- <a class="dropdown-item colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="1">Fries</a>
+              <div class="dropdown-divider"></div> -->
+              <a class="dropdown-item colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="3">Shakes
                 & Ice Cream</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link colorTextBlack" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link colorTextBlack" href="#">Contact</a>
-          </li>
+
         </ul>
       </div>
     </nav>
@@ -70,14 +74,146 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           </ol> -->
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              PAGE1
+            <!-- <div class="carousel-item active" id="menuBurgerFries"> -->
+            <div class="carousel-item active" id="menuAbout">
+              <div class="container-fluid secondaryContainer">
+                <div class="row">
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/burger.png" alt="BurgerIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">About</span>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="carousel-item">
-              PAGE2
+            <div class="carousel-item" id="menuContact">
+                <div class="container-fluid secondaryContainer">
+                  <div class="row">
+                    <div class="col-sm menuItem">
+                      <img class="menuImage" src="Assets/Icons/burger.png" alt="BurgerIcon" />
+                      <footer class="footer mt-auto py-3">
+                        <div class="container">
+                          <span class="menuFooter">Contact</span>
+                        </div>
+                      </footer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="carousel-item" id="menuBurgerFries">
+              <div class="container-fluid secondaryContainer">
+                <div class="row">
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/burger.png" alt="BurgerIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">Burger 1</span>
+                      </div>
+                    </footer>
+                  </div>
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/burger.png" alt="BurgerIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">Burger 2</span>
+                      </div>
+                    </footer>
+                  </div>
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/burger.png" alt="BurgerIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">Burger 3</span>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/french-fries.png" alt="FriesIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">Fries 1</span>
+                      </div>
+                    </footer>
+                  </div>
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/french-fries.png" alt="FriesIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">Fries 2</span>
+                      </div>
+                    </footer>
+                  </div>
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/french-fries.png" alt="FriesIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">Fries 3</span>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="carousel-item">
-              PAGE3
+            <div class="carousel-item" id="menuIceCreamShakes">
+              <div class="container-fluid secondaryContainer">
+                <div class="row">
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/ice-cream.png" alt="IceCreamIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">Ice Cream 1</span>
+                      </div>
+                    </footer>
+                  </div>
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/ice-cream.png" alt="IceCreamIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">Ice Cream 2</span>
+                      </div>
+                    </footer>
+                  </div>
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/ice-cream.png" alt="IceCreamIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">Ice Cream 3</span>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/ice-cream.png" alt="IceCreamIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">Shake 1</span>
+                      </div>
+                    </footer>
+                  </div>
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/ice-cream.png" alt="IceCreamIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">Shake 2</span>
+                      </div>
+                    </footer>
+                  </div>
+                  <div class="col-sm menuItem">
+                    <img class="menuImage" src="Assets/Icons/ice-cream.png" alt="IceCreamIcon" />
+                    <footer class="footer mt-auto py-3">
+                      <div class="container">
+                        <span class="menuFooter">Shake 3</span>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
