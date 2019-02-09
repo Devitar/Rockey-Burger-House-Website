@@ -123,17 +123,40 @@ a:hover {
 .menuItem {
     background-color: $themeRed;
     text-align: center;
-    .menuImage{
+
+    .menuImage {
         width: 120px;
         height: 120px;
-        
+
     }
-    .menuFooter{
-        box-shadow: 
-        0px 11px 15px -10px $themeBlack,
-        0px -11px 15px -10px $themeBlack; 
+
+    .menuFooter,
+    .itemFooter {
+        box-shadow:
+            0px 11px 15px -10px $themeBlack,
+            0px -11px 15px -10px $themeBlack;
         // Just top and bottom shadows
+        font-size: 1.2em;
     }
+}
+
+// .googleMap {
+//     overflow: hidden;
+//     padding-bottom: 56.25%;
+//     position: relative;
+//     height: 0;
+// }
+
+// .googleMap iframe {
+//     left: 0;
+//     top: 0;
+//     height: 100%;
+//     width: 100%;
+//     position: absolute;
+// }
+
+.pageFooter {
+    background-color: $themeWhite;
 }
 
 
