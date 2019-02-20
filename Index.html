@@ -4,27 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <title>Rocky Burger House</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <!-- bootstrap stuff -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
-  <!-- <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script> -->
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script> <!-- Full JQuery version -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
     crossorigin="anonymous"></script>
   <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
 
+  <!-- bootstrap toggle stuff -->
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
+
+  <!-- my stuff -->
   <link href="./Styles/CSS/mainStyle.css" rel="stylesheet" type="text/css" />
   <script defer src="JavaScript/Main.js"></script>
+
 </head>
 
 <body>
 
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light bsNavBar position-absolute fixed-top" id="navBar">
-      <a class="navbar-brand" href="#"><img src="./Assets/Images/rockeyburgers03-logo.png" class="logo" alt="Company Logo" /></a>
+      <a class="navbar-brand" href="#" data-target="#carouselExampleIndicators" data-slide-to="0"><img src="./Assets/Images/rockeyburgers03-logo.png"
+          class="logo" alt="Company Logo" /></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,10 +44,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="0">About</a>
+            <a class="nav-link colorTextBlack hideNavbar" href="#" data-target="#carouselExampleIndicators"
+              data-slide-to="0">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="1">Contact</a>
+            <a class="nav-link colorTextBlack hideNavbar" href="#" data-target="#carouselExampleIndicators"
+              data-slide-to="1">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link colorTextBlack hideNavbar" href="#" data-target="#carouselExampleIndicators"
+              data-slide-to="2">F.A.Q.</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle colorTextBlack" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -44,13 +61,13 @@
               Our Menu
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="2"
-                class="active">Burgers & Fries</a>
+              <a class="dropdown-item colorTextBlack hideNavbar" href="#" data-target="#carouselExampleIndicators"
+                data-slide-to="3">Burgers
+                & Fries</a>
               <div class="dropdown-divider"></div>
-              <!-- <a class="dropdown-item colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="1">Fries</a>
-              <div class="dropdown-divider"></div> -->
-              <a class="dropdown-item colorTextBlack" href="#" data-target="#carouselExampleIndicators" data-slide-to="3">Shakes
-                & Ice Cream</a>
+              <a class="dropdown-item colorTextBlack hideNavbar" href="#" data-target="#carouselExampleIndicators"
+                data-slide-to="4">Ice
+                Cream & More</a>
             </div>
           </li>
 
@@ -67,27 +84,33 @@
 
     <div class="row middle h-auto">
       <div class="col-xl-12">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
-          <!-- <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol> -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false"
+          data-touch="false">
           <div class="carousel-inner">
-            <!-- <div class="carousel-item active" id="menuBurgerFries"> -->
             <div class="carousel-item active" id="menuAbout">
               <div class="container-fluid secondaryContainer">
                 <div class="row">
-                  <div class="col-sm menuItem">
+                  <div class="col-12 menuItem menuItemTop youtubeEmbed">
+                    <div class="youtubeVideo .embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/z5hwo3XxN0c"
+                        allowfullscreen></iframe>
+                      <footer class="footer mt-auto py-3">
+                        <div class="container backgroundRed">
+                          <span class="itemFooter colorTextWhite">How we cook our burgers - the right way!</span>
+                        </div>
+                      </footer>
+                    </div>
+                  </div>
+                  <div class="col-12 menuItem menuItemBottom">
                     <div class="googleMap .embed-responsive embed-responsive-1by1">
                       <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.5226495263078!2d-111.73913108432687!3d40.01910898764916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874da5b619953f95%3A0xa44acc3adb4e3d13!2s348+Pommel+Dr%2C+Payson%2C+UT+84651!5e0!3m2!1sen!2sus!4v1549668374247"
                         allowfullscreen></iframe>
+                      <footer class="footer mt-auto py-3">
+                        <div class="container backgroundRed">
+                          <span class="itemFooter colorTextWhite">Our Location</span>
+                        </div>
+                      </footer>
                     </div>
-                    <footer class="footer mt-auto py-3">
-                      <div class="container">
-                        <span class="itemFooter">Our Location</span>
-                      </div>
-                    </footer>
                   </div>
                 </div>
               </div>
@@ -95,64 +118,182 @@
             <div class="carousel-item" id="menuContact">
               <div class="container-fluid secondaryContainer">
                 <div class="row">
-                  <footer class="footer mt-auto py-3">
+                  <footer class="footer mt-auto py-3 col-12">
                     <div class="container">
-                      <span class="pageFooter">Contact</span>
+                      <form>
+                        <div class="form-group">
+                          <label for="validationDefault01">First name</label>
+                          <input type="text" class="form-control" id="validationDefault01" placeholder="First name">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Email address</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">How would you rate your experience?
+                            1(Horrible)-5(Excellent)</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect2">Which items did you order?</label>
+                          <select multiple class="form-control" id="exampleFormControlSelect2">
+                            <option>Burger</option>
+                            <option>Fries</option>
+                            <option>Ice Cream</option>
+                            <option>Sundae</option>
+                            <option>Smoothie</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Please provide any other feedback you'd like to add.</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <span>Can we contact you?</span>
+                        <input type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="success"
+                          data-offstyle="danger">
+                      </form>
                     </div>
                   </footer>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" id="faq">
+              <div class="container-fluid secondaryContainer">
+                <div class="row">
+                  <div class="col-12 menuItem menuItemAccordion">
+                    <div class="accordion" id="accordionExample">
+                      <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link colorTextBlack" type="button" data-toggle="collapse"
+                              data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Why burgers?
+                            </button>
+                          </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                          <div class="card-body">
+                            Spicy jalapeno bacon ipsum dolor amet strip steak landjaeger picanha, pig salami kielbasa
+                            prosciutto sirloin kevin pork loin chicken fatback brisket. Boudin kielbasa tri-tip filet
+                            mignon. Turkey tail boudin shoulder drumstick corned beef landjaeger, ham hock short loin
+                            jerky tongue strip steak bacon sirloin alcatra. Tail salami landjaeger, pig shank pork chop
+                            shankle porchetta hamburger alcatra tongue meatloaf. Bacon bresaola sirloin, drumstick
+                            sausage capicola frankfurter buffalo pork belly short ribs rump burgdoggen. Prosciutto
+                            brisket tongue venison corned beef bacon strip steak ground round boudin sausage swine ball
+                            tip.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwo">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link collapsed colorTextBlack" type="button" data-toggle="collapse"
+                              data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              When burgers?
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                          <div class="card-body">
+                            Always! <br>
+                            Spicy jalapeno bacon ipsum dolor amet strip steak landjaeger picanha, pig salami kielbasa
+                            prosciutto sirloin kevin pork loin chicken fatback brisket. Boudin kielbasa tri-tip filet
+                            mignon. Turkey tail boudin shoulder drumstick corned beef landjaeger, ham hock short loin
+                            jerky tongue strip steak bacon sirloin alcatra. Tail salami landjaeger, pig shank pork chop
+                            shankle porchetta hamburger alcatra tongue meatloaf. Bacon bresaola sirloin, drumstick
+                            sausage capicola frankfurter buffalo pork belly short ribs rump burgdoggen. Prosciutto
+                            brisket tongue venison corned beef bacon strip steak ground round boudin sausage swine ball
+                            tip.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThree">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link collapsed colorTextBlack" type="button" data-toggle="collapse"
+                              data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Whose burgers?
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                          <div class="card-body">
+                            Ours of course! <br>
+                            Spicy jalapeno bacon ipsum dolor amet strip steak landjaeger picanha, pig salami kielbasa
+                            prosciutto sirloin kevin pork loin chicken fatback brisket. Boudin kielbasa tri-tip filet
+                            mignon. Turkey tail boudin shoulder drumstick corned beef landjaeger, ham hock short loin
+                            jerky tongue strip steak bacon sirloin alcatra. Tail salami landjaeger, pig shank pork
+                            chop
+                            shankle porchetta hamburger alcatra tongue meatloaf. Bacon bresaola sirloin, drumstick
+                            sausage capicola frankfurter buffalo pork belly short ribs rump burgdoggen. Prosciutto
+                            brisket tongue venison corned beef bacon strip steak ground round boudin sausage swine
+                            ball
+                            tip.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="carousel-item" id="menuBurgerFries">
               <div class="container-fluid secondaryContainer">
                 <div class="row">
-                  <div class="col-sm menuItem">
+                  <div class="col-12 col-lg-4 menuItem menuItemTop">
                     <img class="menuImage" src="Assets/Icons/burger.png" alt="BurgerIcon" />
                     <footer class="footer mt-auto py-3">
                       <div class="container">
-                        <span class="menuFooter">Burger 1</span>
+                        <span class="menuFooter">$2.99 Cheeseburger</span>
                       </div>
                     </footer>
                   </div>
-                  <div class="col-sm menuItem">
+                  <div class="col-12 col-lg-4 col-md-12 menuItem">
                     <img class="menuImage" src="Assets/Icons/burger.png" alt="BurgerIcon" />
                     <footer class="footer mt-auto py-3">
                       <div class="container">
-                        <span class="menuFooter">Burger 2</span>
+                        <span class="menuFooter">$3.49 Burger Deluxe</span>
                       </div>
                     </footer>
                   </div>
-                  <div class="col-sm menuItem">
+                  <div class="col-12 col-lg-4 col-md-12 menuItem">
                     <img class="menuImage" src="Assets/Icons/burger.png" alt="BurgerIcon" />
                     <footer class="footer mt-auto py-3">
                       <div class="container">
-                        <span class="menuFooter">Burger 3</span>
+                        <span class="menuFooter">$4.00 Bacon Burger Deluxe</span>
                       </div>
                     </footer>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-sm menuItem">
+                  <div class="col-12 col-lg-4 menuItem">
                     <img class="menuImage" src="Assets/Icons/french-fries.png" alt="FriesIcon" />
                     <footer class="footer mt-auto py-3">
                       <div class="container">
-                        <span class="menuFooter">Fries 1</span>
+                        <span class="menuFooter">$0.99 Small Fries</span>
                       </div>
                     </footer>
                   </div>
-                  <div class="col-sm menuItem">
+                  <div class="col-12 col-lg-4 menuItem">
                     <img class="menuImage" src="Assets/Icons/french-fries.png" alt="FriesIcon" />
                     <footer class="footer mt-auto py-3">
                       <div class="container">
-                        <span class="menuFooter">Fries 2</span>
+                        <span class="menuFooter">$1.49 Medium Fries</span>
                       </div>
                     </footer>
                   </div>
-                  <div class="col-sm menuItem">
+                  <div class="col-12 col-lg-4 menuItem menuItemBottom">
                     <img class="menuImage" src="Assets/Icons/french-fries.png" alt="FriesIcon" />
                     <footer class="footer mt-auto py-3">
                       <div class="container">
-                        <span class="menuFooter">Fries 3</span>
+                        <span class="menuFooter">$2.00 Large Fries</span>
                       </div>
                     </footer>
                   </div>
@@ -162,53 +303,53 @@
             <div class="carousel-item" id="menuIceCreamShakes">
               <div class="container-fluid secondaryContainer">
                 <div class="row">
-                  <div class="col-sm menuItem">
+                  <div class="col-12 col-lg-4 menuItem menuItemTop">
                     <img class="menuImage" src="Assets/Icons/ice-cream.png" alt="IceCreamIcon" />
                     <footer class="footer mt-auto py-3">
                       <div class="container">
-                        <span class="menuFooter">Ice Cream 1</span>
+                        <span class="menuFooter">$1.00 Small Cone</span>
                       </div>
                     </footer>
                   </div>
-                  <div class="col-sm menuItem">
+                  <div class="col-12 col-lg-4 menuItem">
                     <img class="menuImage" src="Assets/Icons/ice-cream.png" alt="IceCreamIcon" />
                     <footer class="footer mt-auto py-3">
                       <div class="container">
-                        <span class="menuFooter">Ice Cream 2</span>
+                        <span class="menuFooter">$2.00 Large Cone</span>
                       </div>
                     </footer>
                   </div>
-                  <div class="col-sm menuItem">
+                  <div class="col-12 col-lg-4 menuItem">
                     <img class="menuImage" src="Assets/Icons/ice-cream.png" alt="IceCreamIcon" />
                     <footer class="footer mt-auto py-3">
                       <div class="container">
-                        <span class="menuFooter">Ice Cream 3</span>
+                        <span class="menuFooter">$2.79 Sundae</span>
                       </div>
                     </footer>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-sm menuItem">
-                    <img class="menuImage" src="Assets/Icons/ice-cream.png" alt="IceCreamIcon" />
+                  <div class="col-12 col-lg-4 menuItem">
+                    <img class="menuImage" src="Assets/Icons/smoothie.png" alt="IceCreamIcon" />
                     <footer class="footer mt-auto py-3">
                       <div class="container">
-                        <span class="menuFooter">Shake 1</span>
+                        <span class="menuFooter">$1.50 Small Smoothie</span>
                       </div>
                     </footer>
                   </div>
-                  <div class="col-sm menuItem">
-                    <img class="menuImage" src="Assets/Icons/ice-cream.png" alt="IceCreamIcon" />
+                  <div class="col-12 col-lg-4 menuItem">
+                    <img class="menuImage" src="Assets/Icons/smoothie.png" alt="IceCreamIcon" />
                     <footer class="footer mt-auto py-3">
                       <div class="container">
-                        <span class="menuFooter">Shake 2</span>
+                        <span class="menuFooter">$2.50 Medium Smoothie</span>
                       </div>
                     </footer>
                   </div>
-                  <div class="col-sm menuItem">
-                    <img class="menuImage" src="Assets/Icons/ice-cream.png" alt="IceCreamIcon" />
+                  <div class="col-12 col-lg-4 menuItem menuItemBottom">
+                    <img class="menuImage" src="Assets/Icons/smoothie.png" alt="IceCreamIcon" />
                     <footer class="footer mt-auto py-3">
                       <div class="container">
-                        <span class="menuFooter">Shake 3</span>
+                        <span class="menuFooter">$3.50 Large Smoothie</span>
                       </div>
                     </footer>
                   </div>
